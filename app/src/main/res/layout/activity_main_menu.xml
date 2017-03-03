@@ -9,10 +9,52 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/mainBackgroundColor"
     tools:context="com.joelrorseth.ironinspiredfitness.MainMenuActivity">
 
+
     <TextView
+        android:id="@+id/menu_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:textSize="30dp"
+        android:text="Iron Inspired Fitness"
+        android:clickable="false"
+        android:textColor="@color/darkGrayColor"/>
+
+
+    <Button
+        android:id="@+id/generate_workout_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/buttonTextColor"
+        android:text="Generate Workout"/>
+
+    <Button
+        android:id="@+id/my_workouts_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/generate_workout_button"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/buttonTextColor"
+        android:text="My Workouts"/>
+
+    <Button
+        android:id="@+id/browse_exercies_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/my_workouts_button"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/buttonTextColor"
+        android:text="Browse Exercises"/>
 </RelativeLayout>
