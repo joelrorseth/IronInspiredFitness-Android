@@ -12,4 +12,10 @@
     android:background="@color/mainBackgroundColor"
     tools:context="com.joelrorseth.ironinspiredfitness.MyWorkoutsActivity">
 
+    <ListView
+        android:id="@+id/workouts_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
 </RelativeLayout>
