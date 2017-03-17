@@ -7,7 +7,7 @@
 			"motion" : "Pull",
 			"image" : "http://www.link_containing_execercise_photo.com/example.jpg",
 			"desc" : "Sit slightly forward on seat or bench in order to grasp cable attachment. Pull cable attachment to waist while straightening lower back. Pull shoulders back and push chest forward while arching back. Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward. Repeat.",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},
 
 		{
@@ -15,7 +15,7 @@
 			"motion" : "Pull",
 			"image" : "http://www.find_another_picture_from_same_site.com/img.jpg",
 			"desc" : "Bend knees slightly and bend over bar with back straight. Grasp bar with wide overhand grip. Pull bar to upper waist. Return until arms are extended and shoulders are stretched downward. Repeat.",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},
 
 		{
@@ -23,7 +23,7 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Load a barbell with an appropriate amount of weight and place it on the floor infront of you. Stand shoulder width apart and bend over and place your hands on the bar with an overhand or mixed grip. Make sure your back is straight and your chest is up. Pull the weight up off the ground, thrusting the bar once at full extension. Lower weight back down keeping the bar as close to you as possible. Repeat",
-			"difficulty" : "hard",
+			"difficulty" : "hard"
 		},
 		
 		{
@@ -31,7 +31,7 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Load a barbell with an appropriate amount of weight and place it on the floor infront of you. Stand with a wide stance (past shoulder length) and bend over and place your hands on the bar with an overhand or mixed grip. Make sure your back is straight and your chest is up. Pull the weight up off the ground, thrusting the bar once at full extension. Lower weight back down keeping the bar as close to you as possible. Repeat",
-			"difficulty" : "hard",
+			"difficulty" : "hard"
 		},
 		
 		{
@@ -39,7 +39,7 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Load a barbell with an appropriate amount of weight and place it on the floor infront of you. Stand with a close stance (inside shoulder length) and bend over and place your hands on the bar with an overhand or mixed grip. Make sure your back is straight and your chest is up. Pull the weight up off the ground, thrusting the bar once at full extension. Lower weight back down keeping the bar as close to you as possible. Do this while keeping your legs as straight as possible Repeat",
-			"difficulty" : "hard",
+			"difficulty" : "hard"
 		},
 		
 		{
@@ -47,9 +47,8 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Grab a dumbell and place it next to the side of a bench. Place your left hand on the front of the bench and your left knee on the bench so that your back is straight. Pick up the dumbell with your right hand and pull the bumbell up and towards your mid back (not chest) and lower it back down. Do the opposite for the left side as well. Repeat",
-			"difficulty" : "moderate",
-		},
-		
+			"difficulty" : "moderate"
+		}
 	],
 
 
@@ -65,15 +64,15 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Sit on preacher bench placing back of arms on pad. Grasp curl bar with shoulder width underhand grip. Raise bar until forearms are vertical. Lower barbell until arms are fully extended. Repeat.",
-			"difficulty" : "easy",	
+			"difficulty" : "easy"
 		},
 
 		{
 			"name" : "Inclined Curl",
-			"motion" : "Pull"
+			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Sit on an inclined bench at 45 - 60 degrees. While keeping your elbows tucked into your sides, angle your hands about 45 degrees from your body. Preform a curl motion in this position. Typically done with a lighter weight. Repeat.",
-			"difficulty" : "easy",
+			"difficulty" : "easy"
 		},
 		
 		{
@@ -81,7 +80,7 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "With an appropriate weight, grab the dumbell with an underhand grip. Lift the dumbell up to just under your shoulders. Lower the weight in a slow and controlled manner. Repeat.",
-			"difficulty" : "easy",
+			"difficulty" : "easy"
 		},
 		
 		{
@@ -89,9 +88,8 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Grab a barbell of an appropriate weight with an overhand grip. Lift the barbell up to just under your shoulders. Lower the weight in a slow controlled manner. Repeat.",
-			"difficulty" : "easy",
-		},
-				
+			"difficulty" : "easy"
+		}
 	],
 
 	
@@ -101,20 +99,20 @@
 	
 	
 	"Calves" : [
-	
-		{
-			"name" : "Calf Raise",
-			"motion" : "Legs",
-			"image" : "##########",
-			"desc" : "Position the shoulder rests at an appropriate height so that you have pressure on you when under it. With the heels of your feet hanging over the edge of the step, lift up on your tippy toes and slowly lower for a full extension. Repeat.",
-			"difficulty" : "easy",
+        {
+          "name": "Calf Raise",
+          "motion": "Legs",
+          "image": "##########",
+          "desc": "Position the shoulder rests at an appropriate height so that you have pressure on you when under it. With the heels of your feet hanging over the edge of the step, lift up on your tippy toes and slowly lower for a full extension. Repeat.",
+          "difficulty": "easy"
+        },
 			
 		{
 			"name" : "Seated Calf Raise",
 			"motion" : "Legs",
 			"image" : "##########",
-			"desc" : "Sit in the seat and position the pad over your knees so that there is pressure applied. Lift up and move the safty bar out of the way. Lift up on your tippy toes and slowly lower for a full extension. Repeat.",",
-			"difficulty" : "easy",
+			"desc" : "Sit in the seat and position the pad over your knees so that there is pressure applied. Lift up and move the safty bar out of the way. Lift up on your tippy toes and slowly lower for a full extension. Repeat.",
+			"difficulty" : "easy"
 		},
 		
 		{
@@ -122,17 +120,16 @@
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Sit in the seat and position the foot rest at an appropriate length so that there is pressure applied. Push the rest forward with your tippy toes for a full extension, then in a controlled manner return the foot rest back into its original resting point. Repeat. ",
-			"difficulty" : "easy",
-		},	
-		
+			"difficulty" : "easy"
+		},
+
 		{
 			"name" : "Stair Calf Raise",
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Stand at the bottom of a staircase. At each step, do the specified amount of controlled calf raises with a full extension. Hold onto the railing for support.",
-			"difficulty" : "moderate",
-		},	
-	
+			"difficulty" : "moderate"
+		}
 	],
 	
 	
@@ -148,7 +145,7 @@
 			"motion" : "Push",
 			"image" : "###########",
 			"desc" : "Lay down on a bench with a barbell above you. Position your body so the barbell rests between your eyes and your nose. With your shoulders dug into the bench, arch your back and squeeze your glutes for maximum balance. Move your feet back so that your heels barely lift of the ground. Grab the bar with an overhand grip, lift of the rack and in a controlled manner, lower the weight so that you touch yur chest before exploding the weight back to the top. Repeat.",
-			"difficulty" : "Hard",
+			"difficulty" : "Hard"
 		},	
 	
 		{
@@ -156,7 +153,7 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Position the seat at a height so that the handles are at chest level. Grab onto the handles one at a time and position them infront of you. In a controlled manner allow the weight to fall back into its starting position to create a stretch in the muscle. Push the handles back out infront of you to complete the rep. Repeat.",
-			"difficulty" : "easy",
+			"difficulty" : "easy"
 		},	
 	
 		{
@@ -164,7 +161,7 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Set up a bench to 45 degrees. Lay down on the bench and using your knees lift the weight up. With your elbows pointed at about 45 degree angles from your body, in a controlled manner lower the dumbells down to your chest level and then explode the weight back up. Repeat. ",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},	
 		
 		{
@@ -172,7 +169,7 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Position yourself on the floor with your legs straight back and your hands at your chest but shoulder width apart. While keeping your back straight, push yourself off the ground while with your tippy toes and palms of your hands on the ground still. Lower yourself so that your nose almost touches the ground. Do not allow yourself to fall to the ground. Repeat.",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},	
 		
 		{
@@ -180,9 +177,8 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Grab a plate of appropriate weight, Hold the weight close to your chest with both hands pressing against the flat sides of the plate in an upright position. Push against the plate with as much pressure as you can and slowly extend your arms to push the plate out infront of you. Slowly bring the plate back towards your chest while continuing to apply pressure. Repeat.",
-			"difficulty" : "easy",
-		},	
-	
+			"difficulty" : "easy"
+		}
 	],
 	
 	
@@ -195,7 +191,7 @@
 			"motion" : "Abs",
 			"image" : "##########",
 			"desc" : "Grab a pull up bar with an overhnd grip. Lift your legs slightly off the ground so that you are hanging from the bar. Lift your legs up infront of you as high as you can while trying to keep you legs as straight as possible. Lower your legs down slowly to your starting position. Repeat",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},
 
 		{	
@@ -203,7 +199,7 @@
 			"motion" : "Abs",
 			"image" : "##########",
 			"desc" : "Lay down on the floor with your legs bent at a 90 degree angle. Either cross your arms in front of you or hold your hands at the side of your head. Using your core, lift your body up off the ground while keeping your lower body on the ground. Lower yourself back onto the ground slowly. Repeat.",
-			"difficulty" : "easy",
+			"difficulty" : "easy"
 		},
 		
 		{
@@ -211,9 +207,8 @@
 			"motion" : "Abs",
 			"image" : "##########",
 			"desc" : "Sit down on the ground so that you are balancing on just your butt. Holding a weight (Medicine Ball, Dumbell, Plate, etc.), move the weight to one side of your body by only rotating your torso. move the weight across your body to the other side by rotating your torso back the other way. Remain balanced on your butt the entire movement. Repeat",
-			"difficulty", : "easy",
-		},
-	
+			"difficulty" : "easy"
+		}
 	],
 	
 	
@@ -229,9 +224,8 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Grab a barbell and sit on the end of a bench. Lean over and rest your arms on your legs so that your hands are hanging just over your knees. Use your wrists to curl the weight up and back down in a controlled manner. Repeat.",
-			"difficulty" : "easy",
-		},
-	
+			"difficulty" : "easy"
+		}
 	],
 	
 	
@@ -247,7 +241,7 @@
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Grab either a set of dumbells or a barbell and set it in front of you. With your feet together, pick up the weight and stand up straight to start the motion. While hinging back at your hips, lower the weight to just past your knees while keeping the weight as close to your body as possible. Keep your back straight throught the movement. Pull the weight back up. Repeat.",
-			"difficulty" : "hard",	
+			"difficulty" : "hard"
 		},
 		
 		{
@@ -255,7 +249,7 @@
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Adjust the arm to the appropriate distance so that your ankles rest against it when lying down. Lay down on the bench so that your knees are positioned at the very edge. Pull the arm up and as close to your butt as possible without bouncing it off of yourself. Lower the arm slowly back in to its original position. Repeat.",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},
 		
 		{
@@ -263,9 +257,8 @@
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Grab a kettlebell and stand up straight. Lunge forward with your right foot so that your left knee is barely off the ground. Pass the kettlebell under your right leg from one hand to the other. Push back up into your starting position. Do the same for the left leg. Repeat.",
-			"difficulty" : "moderate",
-		},
-		
+			"difficulty" : "moderate"
+		}
 	],
 	
 	
@@ -280,7 +273,7 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "At a squat rack position the barbell so that its at shoulder height. Grab the barbell with an overhand grip about shoulder length apart. Position your body under the bar so that the barbell rests just below your neck. Lift the barbell off the rack and take a step back. While keeping your body straight and tight, move your head out of the path of the bar and lift the bar up above your head. Lower the weight back onto its starting point. Repeat.",
-			"difficulty" : "hard",
+			"difficulty" : "hard"
 		},
 		
 		{
@@ -288,7 +281,7 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Grab a set of dumbells of an appropriate weight. Sit on an upright bench and hold the dumbells on your knees. Using your knees lift the weight up. Push the weight up over your head. Lower the weight back down to shoulder level in a controlled manner while keeping your arms at avbout a 45 degree angle from your body. Do not arch your back during this motion. Repeat.",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},
 		
 		{
@@ -296,9 +289,8 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Grab a set of dumbells of a lighter weight. Stand up straight with the dumbells at your sides. While keeping your arms as straight as possible, raise the dumbells up to shoulder height. It should feel like you are pulling from your elbows as to not allow the weight to go higher than your shoulders. Lower the weight back down slowly. Repeat.",
-			"difficulty" : "easy",
-		},
-		
+			"difficulty" : "easy"
+		}
 	],
 	
 	
@@ -313,7 +305,7 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Grab a barbell or set of dumbells of an appropriate weight. While keeping your head straight and your shoulders back, Shrug your shoulders to pull the weight up. Hold for a couple seconds then slowly lower the weight back down. Repeat.",
-			"difficulty" : "easy",
+			"difficulty" : "easy"
 		},
 		
 		{
@@ -321,9 +313,8 @@
 			"motion" : "Pull",
 			"image" : "##########",
 			"desc" : "Hook up the rope handles on a cable that is positioned above your head. Select an appropriate weight so that you can stand away from the cable and lean back without falling down. Pull the rope towards your face and hold it for a few seconds before slowly letting it go back into its starting position. Repeat.",
-			"difficulty" : "easy",
-		},
-	
+			"difficulty" : "easy"
+		}
 	],
 	
 	
@@ -339,7 +330,7 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Grab a light dumbell. Lean over and rest your arm on an upright bench. With the weight in the opposite arm, position your arm straight back behind you. Extend the arm so that it is straight. Lower the weight back down hinging at the elbow. Repeat.", 
-			"difficulty" : "easy",
+			"difficulty" : "easy"
 		},
 		
 		{
@@ -347,7 +338,7 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Grab a barbell with an overhand grip and sit on the edge of a bench. Lay down so that your shouler blades are tucked into the bench. With the barbell straight up above you lower your arms back so the weight is not directly above you. Hinging at the elbows, lower the weight towards your face without hitting it. Raise the weight back up to its starting position. Repeat.",
-			"difficulty" : "moderate",
+			"difficulty" : "moderate"
 		},
 
 		{
@@ -355,9 +346,8 @@
 			"motion" : "Push",
 			"image" : "##########",
 			"desc" : "Sit down on a bench with a barbell above it. Lay down so that the barbell is in between your eyes and nose. Tuckn your shoulders into the bench for support. Grab the barbell with an overhand grip inside of your shoulder width. Lift off the rests and lower the barbell down towards your chest. Keep your elbows as close to your body as possible throughout the entire movement. Once you touch your chest, explode the weight back to its starting position. Repeat.",
-			"difficulty" : "moderate",
-		},
-		
+			"difficulty" : "moderate"
+		}
 	],
 	
 	
@@ -373,7 +363,7 @@
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Stand infront of the squat rack with the barbell positioned at your shoulder height. Grab the barbell with a wide overhand grip. Move underneath the barbell so that it rests on your traps comfortably. Lift the weight off the rack and take a step back. Standing with your feet about shoulder width apart, Begin decsending by hinging back at your hips and dropping your butt so that you go past having your quads parallel to the floor. Explode back up to the top of the motion. Repeat.",
-			"difficulty" : "hard",
+			"difficulty" : "hard"
 		},
 		
 		{
@@ -381,7 +371,7 @@
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Sit down on the seat and place your feet up on the platform about shoulder width apart. Push the weight up off the rack and remove the safety bars. Lower the weight down so your knees almost touch your chest. Push the weight back up but do not lock out at your knees. Repeat this movement in a smooth continuous motion for maximum engagement.",
-			"difficulty" : "easy",
+			"difficulty" : "easy"
 		},
 		
 		{
@@ -389,9 +379,7 @@
 			"motion" : "Legs",
 			"image" : "##########",
 			"desc" : "Sit on the seat and position the arm so that it rests comfortably on the bottom of your shins. Holding onto the handles, raise your legs to a full extension and hold for a couple seconds. Slowly lower the weight back down to the arm is back in its starting poisition. Repeat.",
-			"difficulty" : "easy",
-		},
-	
-	],
-	
+			"difficulty" : "easy"
+		}
+	]
 }

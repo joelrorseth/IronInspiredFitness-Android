@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">Iron Inspired Fitness</string>
+
+
+    <string name="back">Back</string>
+    <string name="biceps">Biceps</string>
+    <string name="calves">Calves</string>
+    <string name="chest">Chest</string>
+    <string name="core">Core</string>
+    <string name="forearms">Forearms</string>
+    <string name="hamstrings">Hamstrings</string>
+    <string name="shoulders">Shoulders</string>
+    <string name="traps">Traps</string>
+    <string name="triceps">Triceps</string>
+    <string name="quads">Quads</string>
+    
+    <!-- 
+    <string-array name="muscle_groups_array">
+        <item>Back</item>
+        <item>Biceps</item>
+        <item>Calves</item>
+        <item>Chest</item>
+        <item>Core</item>
+        <item>Forearms</item>
+        <item>Hamstrings</item>
+        <item>Shoulders</item>
+        <item>Traps</item>
+        <item>Triceps</item>
+        <item>Quads</item>
+    </string-array>
+    -->
+
+    <string-array name="workout_types_array">
+        <item>Any</item>
+        <item>Core</item>
+        <item>Legs</item>
+        <item>Pull</item>
+        <item>Push</item>
+
+    </string-array>
 </resources>

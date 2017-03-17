@@ -12,4 +12,123 @@
     android:background="@color/mainBackgroundColor"
     tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity">
 
+    <TextView
+        android:id="@+id/generate_workout_prompt_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:textSize="20sp"
+        android:text="Please select a workout"
+        android:clickable="false"
+        android:textColor="@color/darkGrayColor"/>
+
+    <Spinner
+        android:id="@+id/workout_type_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/generate_workout_prompt_textview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp">
+    </Spinner>
+
+
+
+
+
+    <RadioGroup
+        android:id="@+id/muscle_group_radio_group_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/workout_type_spinner"
+        android:checkedButton="@+id/sound"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_radio_button"
+        android:text="@string/back" />
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/biceps_radio_button"
+        android:text="@string/biceps" />
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calves_radio_button"
+        android:text="@string/calves" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chest_radio_button"
+            android:text="@string/chest" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/muscle_group_radio_group_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/sound"
+        android:layout_below="@+id/workout_type_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/core_radio_button"
+            android:text="@string/core" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forearms_radio_button"
+            android:text="@string/forearms" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hamstrings_radio_button"
+            android:text="@string/hamstrings" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoulders_radio_button"
+            android:text="@string/shoulders" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/muscle_group_radio_group_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/sound"
+        android:layout_below="@+id/workout_type_spinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/traps_radio_button"
+            android:text="@string/traps" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/triceps_radio_button"
+            android:text="@string/triceps" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quads_radio_button"
+            android:text="@string/quads" />
+    </RadioGroup>
 </RelativeLayout>
