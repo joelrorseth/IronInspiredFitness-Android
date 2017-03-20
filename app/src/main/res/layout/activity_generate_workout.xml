@@ -16,11 +16,10 @@
         android:id="@+id/generate_workout_prompt_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="100dp"
-        android:textSize="20sp"
-        android:text="Please select a workout"
+        android:textSize="18sp"
+        android:text="Start by selecting a workout type"
         android:clickable="false"
         android:textColor="@color/darkGrayColor"/>
 
@@ -28,21 +27,52 @@
         android:id="@+id/workout_type_spinner"
         android:layout_width="fill_parent"
         android:layout_height="36dp"
+        android:layout_marginTop="35dp"
         android:layout_alignTop="@+id/generate_workout_prompt_textview"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="50dp">
-    </Spinner>
+        android:layout_alignParentStart="true"/>
 
 
+    <TextView
+        android:id="@+id/workout_length_prompt_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="How long will you work out?"
+        android:clickable="false"
+        android:textColor="@color/darkGrayColor"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/workout_type_spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
+    <SeekBar
+        android:id="@+id/workout_length_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generate_workout_prompt_textview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/muscle_group_prompt_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Pick muscle groups to target"
+        android:clickable="false"
+        android:textColor="@color/darkGrayColor"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/workout_length_seekbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 
     <RadioGroup
         android:id="@+id/muscle_group_radio_group_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/workout_type_spinner"
+        android:layout_below="@id/muscle_group_prompt_textview"
         android:checkedButton="@+id/sound"
         android:layout_marginTop="20dp">
 
@@ -70,12 +100,13 @@
             android:id="@+id/chest_radio_button"
             android:text="@string/chest" />
     </RadioGroup>
+
     <RadioGroup
         android:id="@+id/muscle_group_radio_group_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checkedButton="@+id/sound"
-        android:layout_below="@+id/workout_type_spinner"
+        android:layout_below="@+id/muscle_group_prompt_textview"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp">
 
@@ -103,12 +134,13 @@
             android:id="@+id/shoulders_radio_button"
             android:text="@string/shoulders" />
     </RadioGroup>
+
     <RadioGroup
         android:id="@+id/muscle_group_radio_group_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checkedButton="@+id/sound"
-        android:layout_below="@+id/workout_type_spinner"
+        android:layout_below="@+id/muscle_group_prompt_textview"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp">
