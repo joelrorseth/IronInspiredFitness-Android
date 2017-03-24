@@ -27,8 +27,30 @@
         android:id="@+id/workout_type_spinner"
         android:layout_width="fill_parent"
         android:layout_height="36dp"
-        android:layout_marginTop="35dp"
         android:layout_alignTop="@+id/generate_workout_prompt_textview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:id="@+id/select_difficulty_prompt_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Which level of difficulty do you expect?"
+        android:clickable="false"
+        android:textColor="@color/darkGrayColor"
+        android:layout_below="@+id/workout_type_spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"/>
+
+    <Spinner
+        android:id="@+id/workout_difficulty_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:layout_alignTop="@+id/select_difficulty_prompt_textview"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
@@ -41,8 +63,8 @@
         android:text="How long will you work out?"
         android:clickable="false"
         android:textColor="@color/darkGrayColor"
-        android:layout_marginTop="17dp"
-        android:layout_below="@+id/workout_type_spinner"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/workout_difficulty_spinner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
@@ -50,7 +72,7 @@
         android:id="@+id/workout_length_seekbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/generate_workout_prompt_textview"
+        android:layout_below="@id/workout_length_prompt_textview"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
@@ -63,7 +85,7 @@
         android:clickable="false"
         android:textColor="@color/darkGrayColor"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/workout_length_seekbar"
+        android:layout_below="@id/workout_length_seekbar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
