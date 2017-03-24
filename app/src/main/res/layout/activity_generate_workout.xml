@@ -12,11 +12,12 @@
     android:background="@color/mainBackgroundColor"
     tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity">
 
+
     <TextView
         android:id="@+id/generate_workout_prompt_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="100dp"
         android:textSize="18sp"
         android:text="Start by selecting a workout type"
@@ -90,99 +91,153 @@
         android:layout_alignParentStart="true"/>
 
 
-    <RadioGroup
-        android:id="@+id/muscle_group_radio_group_1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linear_layout_1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/muscle_group_prompt_textview"
-        android:checkedButton="@+id/sound"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal" >
 
-        <RadioButton
-        android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Back"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/cbBiceps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Biceps"
+            android:checked="false" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_2"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/back_radio_button"
-        android:text="@string/back" />
+        android:layout_below="@id/linear_layout_1"
+        android:orientation="horizontal" >
 
-        <RadioButton
-        android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbCalves"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Calves"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/cbChest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Chest"
+            android:checked="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_3"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/biceps_radio_button"
-        android:text="@string/biceps" />
+        android:layout_below="@id/linear_layout_2"
+        android:orientation="horizontal" >
 
-        <RadioButton
-        android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbCore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Core"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/cbForearms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Forearms"
+            android:checked="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_4"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/calves_radio_button"
-        android:text="@string/calves" />
+        android:layout_below="@id/linear_layout_3"
+        android:orientation="horizontal" >
 
-        <RadioButton
-            android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbHamstrings"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/chest_radio_button"
-            android:text="@string/chest" />
-    </RadioGroup>
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Hamstrings"
+            android:checked="false" />
 
-    <RadioGroup
-        android:id="@+id/muscle_group_radio_group_2"
-        android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbShoulders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Shoulders"
+            android:checked="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_5"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:checkedButton="@+id/sound"
-        android:layout_below="@+id/muscle_group_prompt_textview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp">
+        android:layout_below="@id/linear_layout_4"
+        android:orientation="horizontal" >
 
-        <RadioButton
-            android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbTraps"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/core_radio_button"
-            android:text="@string/core" />
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Traps"
+            android:checked="false" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbTriceps"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/forearms_radio_button"
-            android:text="@string/forearms" />
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Triceps"
+            android:checked="false" />
+    </LinearLayout>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/hamstrings_radio_button"
-            android:text="@string/hamstrings" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/shoulders_radio_button"
-            android:text="@string/shoulders" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/muscle_group_radio_group_3"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linear_layout_6"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:checkedButton="@+id/sound"
-        android:layout_below="@+id/muscle_group_prompt_textview"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp">
+        android:layout_below="@id/linear_layout_5"
+        android:orientation="horizontal" >
 
-        <RadioButton
-            android:layout_width="wrap_content"
+        <CheckBox
+            android:id="@+id/cbQuads"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/traps_radio_button"
-            android:text="@string/traps" />
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="Quads"
+            android:checked="false" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/triceps_radio_button"
-            android:text="@string/triceps" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/quads_radio_button"
-            android:text="@string/quads" />
-    </RadioGroup>
+    </LinearLayout>
 </RelativeLayout>
