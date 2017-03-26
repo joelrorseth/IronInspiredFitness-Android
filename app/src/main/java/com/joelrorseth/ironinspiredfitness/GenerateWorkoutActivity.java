@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 public class GenerateWorkoutActivity extends AppCompatActivity {
 
     // ==============================================
@@ -46,9 +48,29 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Create Intent (transition)
-                Intent detailIntent = new Intent(context, WorkoutDetailActivity.class);
-                startActivity(detailIntent);
+                Intent workoutIntent = new Intent(context, WorkoutDetailActivity.class);
+
+                // Generate a workout, pass it to WorkoutDetailActivity
+                Workout workout = generateWorkout();
+                workoutIntent.putExtra("workout", workout);
+
+                startActivity(workoutIntent);
             }
         });
+    }
+
+    // ==============================================
+    // ==============================================
+    private Workout generateWorkout() {
+
+        ArrayList<Exercise> exercises = new ArrayList<Exercise>();
+        String name = "";
+        Workout.Difficulty difficulty = Workout.Difficulty.Easy;
+        Workout.Type type = Workout.Type.Any;
+        double length = 0.0;
+
+        // TODO: Algorithm for generating workout
+
+        return new Workout(name, exercises, difficulty, type, length);
     }
 }

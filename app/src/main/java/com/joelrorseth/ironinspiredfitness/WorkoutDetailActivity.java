@@ -5,9 +5,13 @@ import android.os.Bundle;
 
 public class WorkoutDetailActivity extends AppCompatActivity {
 
+    private Workout workout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_detail);
+
+        workout = getIntent().getExtras().getParcelable("workout");
     }
 }
