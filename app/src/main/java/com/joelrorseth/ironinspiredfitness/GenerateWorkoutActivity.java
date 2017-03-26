@@ -1,8 +1,12 @@
 package com.joelrorseth.ironinspiredfitness;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class GenerateWorkoutActivity extends AppCompatActivity {
@@ -31,5 +35,20 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         // Set the adapters created to each Spinner
         workoutTypeSpinner.setAdapter(typeAdapter);
         workoutDifficultySpinner.setAdapter(difficultyAdapter);
+
+
+        final Button generateButton = (Button) findViewById(R.id.generate_button);
+        final Context context = this;
+
+        // Create listener for Generate Workout button
+        generateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Create Intent (transition)
+                Intent detailIntent = new Intent(context, WorkoutDetailActivity.class);
+                startActivity(detailIntent);
+            }
+        });
     }
 }
