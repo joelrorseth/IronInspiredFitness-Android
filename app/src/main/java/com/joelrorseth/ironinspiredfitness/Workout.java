@@ -34,6 +34,8 @@ public class Workout implements Parcelable, Serializable {
     // ==============================================
     // ==============================================
     public String getName() { return name; }
+    public String getDifficulty() { return difficulty.name(); }
+    public double getLength() { return length; }
 
     // ==============================================
     // ==============================================

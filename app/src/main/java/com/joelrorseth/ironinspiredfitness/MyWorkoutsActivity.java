@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.Map;
 public class MyWorkoutsActivity extends AppCompatActivity {
 
     private ArrayList<Workout> workouts;
+    private ArrayAdapter<String> workoutAdapter;
 
     // ==============================================
     // ==============================================
@@ -22,6 +24,10 @@ public class MyWorkoutsActivity extends AppCompatActivity {
 
         ListView workoutsListView = (ListView) findViewById(R.id.workouts_list_view);
         loadWorkouts();
+
+        // Our custom adapter only requires a list of Exercise objects
+        WorkoutAdapter adapter = new WorkoutAdapter(this, workouts);
+        workoutsListView.setAdapter(adapter);
     }
 
     // ==============================================
