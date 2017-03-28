@@ -11,7 +11,7 @@ public class Workout implements Parcelable, Serializable {
 
     public enum Type {Any, Core, Legs, Pull, Push}
 
-    public String name;
+    private String name;
     private ArrayList<Exercise> exercises;
     private Difficulty difficulty;
     private Type type;
@@ -25,6 +25,12 @@ public class Workout implements Parcelable, Serializable {
         this.difficulty = difficulty;
         this.type = type;
         this.length = length;
+    }
+
+    // ==============================================
+    // ==============================================
+    public ArrayList<Exercise> getExercises() {
+        return exercises;
     }
 
 

@@ -26,12 +26,11 @@ public class ExercisesActivity extends AppCompatActivity {
         final ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
         final Context context = this;
 
-        // Our custom RecipeAdapter does all the work, given list of Recipe objects
+        // Our custom adapter only requires a list of Exercise objects
         ExerciseAdapter adapter = new ExerciseAdapter(this, exerciseList);
         mExercisesListView.setAdapter(adapter);
 
         // Setup an OnItemClickListener for the list view
-        //final Context context = this;
         mExercisesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             // ==============================================
