@@ -16,9 +16,14 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_alignParentTop="true">
 
         <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity"
+            android:id="@+id/generate_workout_linear_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -89,6 +94,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity"
                 android:orientation="horizontal" >
 
                 <CheckBox
@@ -115,6 +123,9 @@
                 android:id="@+id/linear_layout_2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity"
                 android:orientation="horizontal" >
 
                 <CheckBox
@@ -140,6 +151,9 @@
                 android:id="@+id/linear_layout_3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity"
                 android:orientation="horizontal" >
 
                 <CheckBox
@@ -165,6 +179,9 @@
                 android:id="@+id/linear_layout_4"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity"
                 android:orientation="horizontal" >
 
                 <CheckBox
@@ -190,6 +207,9 @@
                 android:id="@+id/linear_layout_5"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity"
                 android:orientation="horizontal" >
 
                 <CheckBox
@@ -215,6 +235,9 @@
                 android:id="@+id/linear_layout_6"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.joelrorseth.ironinspiredfitness.GenerateWorkoutActivity"
                 android:orientation="horizontal" >
 
                 <CheckBox

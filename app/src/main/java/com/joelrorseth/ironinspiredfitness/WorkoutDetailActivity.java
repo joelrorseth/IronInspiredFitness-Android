@@ -12,6 +12,6 @@ public class WorkoutDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_detail);
 
-        workout = getIntent().getExtras().getParcelable("workout");
+       // workout = getIntent().getExtras().getParcelable("workout");
     }
 }

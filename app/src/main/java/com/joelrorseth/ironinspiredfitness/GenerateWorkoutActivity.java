@@ -1,17 +1,34 @@
 package com.joelrorseth.ironinspiredfitness;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
 public class GenerateWorkoutActivity extends AppCompatActivity {
+
+    private Spinner workoutTypeSpinner;
+    private Spinner workoutDifficultySpinner;
+
+    private SeekBar lengthSeekBar;
+    private static ArrayList<CheckBox> checkboxes;
 
     // ==============================================
     // ==============================================
@@ -20,8 +37,22 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_generate_workout);
 
         // Link up Spinners
-        Spinner workoutTypeSpinner = (Spinner) findViewById(R.id.workout_type_spinner);
-        Spinner workoutDifficultySpinner = (Spinner) findViewById(R.id.workout_difficulty_spinner);
+        workoutTypeSpinner = (Spinner) findViewById(R.id.workout_type_spinner);
+        workoutDifficultySpinner = (Spinner) findViewById(R.id.workout_difficulty_spinner);
+
+        // Link up CheckBoxes, store into ArrayList
+        checkboxes = new ArrayList<>();
+        checkboxes.add((CheckBox) findViewById(R.id.cbBack));
+        checkboxes.add((CheckBox) findViewById(R.id.cbBiceps));
+        checkboxes.add((CheckBox) findViewById(R.id.cbCalves));
+        checkboxes.add((CheckBox) findViewById(R.id.cbChest));
+        checkboxes.add((CheckBox) findViewById(R.id.cbCore));
+        checkboxes.add((CheckBox) findViewById(R.id.cbForearms));
+        checkboxes.add((CheckBox) findViewById(R.id.cbHamstrings));
+        checkboxes.add((CheckBox) findViewById(R.id.cbShoulders));
+        checkboxes.add((CheckBox) findViewById(R.id.cbTraps));
+        checkboxes.add((CheckBox) findViewById(R.id.cbTriceps));
+        checkboxes.add((CheckBox) findViewById(R.id.cbQuads));
 
         // Create basic adapters for string-arrays defined in strings.xml
         ArrayAdapter<CharSequence> typeAdapter =
@@ -52,25 +83,60 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
 
                 // Generate a workout, pass it to WorkoutDetailActivity
                 Workout workout = generateWorkout();
-                workoutIntent.putExtra("workout", workout);
+                //workoutIntent.putExtra("workout", workout);
 
                 startActivity(workoutIntent);
             }
         });
     }
 
+
     // ==============================================
     // ==============================================
     private Workout generateWorkout() {
 
-        ArrayList<Exercise> exercises = new ArrayList<Exercise>();
+        ArrayList<String> selectedMuscleGroups = new ArrayList<>();
+
         String name = "";
-        Workout.Difficulty difficulty = Workout.Difficulty.Easy;
-        Workout.Type type = Workout.Type.Any;
         double length = 0.0;
 
-        // TODO: Algorithm for generating workout
+        // Set type and difficulty by extracting values of Spinners
+        Workout.Difficulty difficulty = Workout.Difficulty.valueOf(workoutDifficultySpinner.getSelectedItem().toString());
+        Workout.Type type = Workout.Type.valueOf(workoutTypeSpinner.getSelectedItem().toString());
 
-        return new Workout(name, exercises, difficulty, type, length);
+        // Discern which muscle groups were selected
+        for (CheckBox checkbox: checkboxes) {
+            if (checkbox.isChecked()) {
+
+                selectedMuscleGroups.add((String) checkbox.getText());
+            }
+        }
+
+
+        // Create an ArrayList of all exercises, loaded from exercises.json
+        ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
+
+        // Create placeholder to potential exercise picks
+        ArrayList<Exercise> potentialExercises = new ArrayList<>();
+
+
+        for (Exercise exercise: exerciseList) {
+
+            // If exercise matches category, append
+            if (selectedMuscleGroups.contains(exercise.category))
+                potentialExercises.add(exercise);
+        }
+
+        // Use Collections shuffle() to rearrange ArrayList
+        Collections.shuffle(potentialExercises, new Random(System.nanoTime()));
+
+        // TODO: Use 'length' to calculate number of exercises
+
+        // TESTING: Print algorithm output
+        for (Exercise e: potentialExercises) {
+            Log.d("ALGORITHM", e.name);
+        }
+
+        return new Workout(name, potentialExercises, difficulty, type, length);
     }
 }

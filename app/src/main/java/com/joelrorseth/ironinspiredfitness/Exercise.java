@@ -17,8 +17,9 @@ public class Exercise {
     public String imageUrl;
     public String motion;
     public String difficulty;
+    public String category;
 
-    private static final ArrayList<String> exerciseCategories = new ArrayList<String>();
+    private static final ArrayList<String> exerciseCategories = new ArrayList<>();
 
     // ==============================================
     // ==============================================
@@ -58,6 +59,7 @@ public class Exercise {
                     exercise.imageUrl = categoryExercises.getJSONObject(i).getString("image");
                     exercise.motion = categoryExercises.getJSONObject(i).getString("motion");
                     exercise.difficulty = categoryExercises.getJSONObject(i).getString("difficulty");
+                    exercise.category = muscleGroup;
 
                     // Add exercise to the ArrayList of Exercises
                     exercisesList.add(exercise);
