@@ -18,10 +18,14 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 public class GenerateWorkoutActivity extends AppCompatActivity {
@@ -129,11 +133,14 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
 
         ArrayList<String> selectedMuscleGroups = new ArrayList<>();
 
-        String name = "EXAMPLE NAME";
-
         // Set type and difficulty by extracting values of Spinners
         Workout.Difficulty difficulty = Workout.Difficulty.valueOf(workoutDifficultySpinner.getSelectedItem().toString());
         Workout.Type type = Workout.Type.valueOf(workoutTypeSpinner.getSelectedItem().toString());
+
+        // Set workout name:  eg. 2017/01/16 12:08
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm", Locale.CANADA);
+        String name = type.name() + " Workout: " + dateFormat.format(new Date());
+
 
         // Discern which muscle groups were selected
         for (CheckBox checkbox: checkboxes) {
