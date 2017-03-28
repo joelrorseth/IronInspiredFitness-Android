@@ -111,8 +111,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
 
         // Create listener for Generate Workout button
         generateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            @Override public void onClick(View v) {
 
                 // Create Intent (transition)
                 Intent workoutIntent = new Intent(context, WorkoutDetailActivity.class);
@@ -121,7 +120,9 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
                 Workout workout = generateWorkout();
                 workoutIntent.putExtra("workout", (Parcelable) workout);
 
+                // Transition to WorkoutDetailActivity, pop this activity off the activity stack
                 startActivity(workoutIntent);
+                finish();
             }
         });
     }
