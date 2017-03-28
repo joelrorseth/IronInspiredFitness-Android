@@ -1,15 +1,19 @@
 package com.joelrorseth.ironinspiredfitness;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Parcel;
 import android.os.Parcelable;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class Workout implements Parcelable, Serializable {
 
-    public enum Difficulty {Easy, Moderate, Hard}
-
-    public enum Type {Any, Core, Legs, Pull, Push}
+    public enum Difficulty { Easy, Moderate, Hard }
+    public enum Type { Any, Core, Legs, Pull, Push }
 
     private String name;
     private ArrayList<Exercise> exercises;
@@ -26,6 +30,10 @@ public class Workout implements Parcelable, Serializable {
         this.type = type;
         this.length = length;
     }
+
+    // ==============================================
+    // ==============================================
+    public String getName() { return name; }
 
     // ==============================================
     // ==============================================
@@ -72,7 +80,6 @@ public class Workout implements Parcelable, Serializable {
         dest.writeDouble(length);
     }
 
-    @SuppressWarnings("unused")
     // ==============================================
     // ==============================================
     public static final Parcelable.Creator<Workout> CREATOR = new Parcelable.Creator<Workout>() {

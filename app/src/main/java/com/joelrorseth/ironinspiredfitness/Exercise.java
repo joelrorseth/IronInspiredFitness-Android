@@ -10,9 +10,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Exercise implements Parcelable {
+public class Exercise implements Parcelable, Serializable {
 
     public String name;
     public String description;
@@ -104,8 +105,12 @@ public class Exercise implements Parcelable {
         return jsonString;
     }
 
+    // ==============================================
+    // ==============================================
     public Exercise() {}
 
+    // ==============================================
+    // ==============================================
     protected Exercise(Parcel in) {
         name = in.readString();
         description = in.readString();
@@ -115,13 +120,15 @@ public class Exercise implements Parcelable {
         category = in.readString();
     }
 
-    @Override
-    public int describeContents() {
+    // ==============================================
+    // ==============================================
+    @Override public int describeContents() {
         return 0;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    // ==============================================
+    // ==============================================
+    @Override public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
         dest.writeString(description);
         dest.writeString(imageUrl);
@@ -130,7 +137,8 @@ public class Exercise implements Parcelable {
         dest.writeString(category);
     }
 
-    @SuppressWarnings("unused")
+    // ==============================================
+    // ==============================================
     public static final Parcelable.Creator<Exercise> CREATOR = new Parcelable.Creator<Exercise>() {
         @Override
         public Exercise createFromParcel(Parcel in) {
