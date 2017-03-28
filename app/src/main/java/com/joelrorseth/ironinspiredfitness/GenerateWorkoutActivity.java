@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -59,6 +60,9 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         // Link up SeekBar (length)
         lengthSeekBar = (SeekBar) findViewById(R.id.workout_length_seekbar);
 
+        // Link up TextView displaying the prompt for (and currently selected) workout length
+        final TextView workoutLengthTextView = (TextView) findViewById(R.id.workout_length_prompt_textview);
+
 
         // Create basic adapters for string-arrays defined in strings.xml
         ArrayAdapter<CharSequence> typeAdapter =
@@ -85,7 +89,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
                 seekBarLength = progress;
 
                 // TODO: Show text indicating current value
-                //___.setText(String.valueOf(progress));
+                workoutLengthTextView.setText("I want to exercise for " + String.valueOf(progress) + " minutes");
             }
 
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
