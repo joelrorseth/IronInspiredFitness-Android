@@ -28,6 +28,8 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
     private Spinner workoutDifficultySpinner;
 
     private SeekBar lengthSeekBar;
+    private int seekBarLength = 60;
+
     private static ArrayList<CheckBox> checkboxes;
 
     // ==============================================
@@ -54,6 +56,10 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         checkboxes.add((CheckBox) findViewById(R.id.cbTriceps));
         checkboxes.add((CheckBox) findViewById(R.id.cbQuads));
 
+        // Link up SeekBar (length)
+        lengthSeekBar = (SeekBar) findViewById(R.id.workout_length_seekbar);
+
+
         // Create basic adapters for string-arrays defined in strings.xml
         ArrayAdapter<CharSequence> typeAdapter =
                 ArrayAdapter.createFromResource(this, R.array.workout_types_array, android.R.layout.simple_spinner_item);
@@ -68,6 +74,23 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         // Set the adapters created to each Spinner
         workoutTypeSpinner.setAdapter(typeAdapter);
         workoutDifficultySpinner.setAdapter(difficultyAdapter);
+
+
+        // Establish a listener for the workout length SeekBar
+        lengthSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                seekBarLength = progress;
+
+                // TODO: Show text indicating current value
+                //___.setText(String.valueOf(progress));
+            }
+
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
 
 
         final Button generateButton = (Button) findViewById(R.id.generate_button);
@@ -98,7 +121,6 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         ArrayList<String> selectedMuscleGroups = new ArrayList<>();
 
         String name = "";
-        double length = 0.0;
 
         // Set type and difficulty by extracting values of Spinners
         Workout.Difficulty difficulty = Workout.Difficulty.valueOf(workoutDifficultySpinner.getSelectedItem().toString());
@@ -120,23 +142,30 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         ArrayList<Exercise> potentialExercises = new ArrayList<>();
 
 
-        for (Exercise exercise: exerciseList) {
 
-            // If exercise matches category, append
+        // Check each exercise, and add to potentialExercises if it matches criteria
+        for (Exercise exercise: exerciseList)
             if (selectedMuscleGroups.contains(exercise.category))
                 potentialExercises.add(exercise);
-        }
 
-        // Use Collections shuffle() to rearrange ArrayList
+
+
+        // Use our devised formula to calculate an 'ideal' number of exercises
+        int numberOfExercisesToGenerate = seekBarLength / 7;
+        Log.d("NUM", seekBarLength + " min workout requires " + numberOfExercisesToGenerate + " exercises");
+
+        // Use Collections shuffle() to rearrange, then take first 'numberOfExercisesToGenerate' elements
         Collections.shuffle(potentialExercises, new Random(System.nanoTime()));
+        potentialExercises = new ArrayList<Exercise> (potentialExercises.subList(0, numberOfExercisesToGenerate));
 
-        // TODO: Use 'length' to calculate number of exercises
+        // TODO: Account for workout type and difficulty preferences by using it to bias randomness
+
 
         // TESTING: Print algorithm output
         for (Exercise e: potentialExercises) {
             Log.d("ALGORITHM", e.name);
         }
 
-        return new Workout(name, potentialExercises, difficulty, type, length);
+        return new Workout(name, potentialExercises, difficulty, type, seekBarLength);
     }
 }

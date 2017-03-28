@@ -76,7 +76,9 @@
                 android:id="@+id/workout_length_seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:max="120"
+                android:progress="60"/>
 
             <TextView
                 android:id="@+id/muscle_group_prompt_textview"
