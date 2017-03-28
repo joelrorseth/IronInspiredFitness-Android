@@ -1,6 +1,8 @@
 package com.joelrorseth.ironinspiredfitness;
 
 import android.content.Context;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -10,7 +12,7 @@ import org.json.JSONObject;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class Exercise {
+public class Exercise implements Parcelable {
 
     public String name;
     public String description;
@@ -101,4 +103,43 @@ public class Exercise {
 
         return jsonString;
     }
+
+    public Exercise() {}
+
+    protected Exercise(Parcel in) {
+        name = in.readString();
+        description = in.readString();
+        imageUrl = in.readString();
+        motion = in.readString();
+        difficulty = in.readString();
+        category = in.readString();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(description);
+        dest.writeString(imageUrl);
+        dest.writeString(motion);
+        dest.writeString(difficulty);
+        dest.writeString(category);
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<Exercise> CREATOR = new Parcelable.Creator<Exercise>() {
+        @Override
+        public Exercise createFromParcel(Parcel in) {
+            return new Exercise(in);
+        }
+
+        @Override
+        public Exercise[] newArray(int size) {
+            return new Exercise[size];
+        }
+    };
 }

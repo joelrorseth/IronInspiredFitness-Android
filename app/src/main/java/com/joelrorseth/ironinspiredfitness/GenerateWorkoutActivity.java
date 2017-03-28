@@ -3,6 +3,7 @@ package com.joelrorseth.ironinspiredfitness;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.AttributeSet;
@@ -112,9 +113,9 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
                 // Create Intent (transition)
                 Intent workoutIntent = new Intent(context, WorkoutDetailActivity.class);
 
-                // Generate a workout, pass it to WorkoutDetailActivity
+                // Important: Generate a workout, pass it to WorkoutDetailActivity
                 Workout workout = generateWorkout();
-                //workoutIntent.putExtra("workout", workout);
+                workoutIntent.putExtra("workout", (Parcelable) workout);
 
                 startActivity(workoutIntent);
             }
@@ -128,7 +129,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
 
         ArrayList<String> selectedMuscleGroups = new ArrayList<>();
 
-        String name = "";
+        String name = "EXAMPLE NAME";
 
         // Set type and difficulty by extracting values of Spinners
         Workout.Difficulty difficulty = Workout.Difficulty.valueOf(workoutDifficultySpinner.getSelectedItem().toString());
