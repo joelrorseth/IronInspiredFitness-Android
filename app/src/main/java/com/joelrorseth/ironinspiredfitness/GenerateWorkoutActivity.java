@@ -31,6 +31,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
     private SeekBar lengthSeekBar;
     private int seekBarLength = 60;
 
+    private static ArrayList<Exercise> exerciseList;
     private static ArrayList<CheckBox> checkboxes;
 
     // ==============================================
@@ -38,6 +39,9 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_workout);
+
+        // Create an ArrayList of all exercises, loaded from exercises.json
+        exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
 
         // Link up Spinners
         workoutTypeSpinner = (Spinner) findViewById(R.id.workout_type_spinner);
@@ -139,9 +143,6 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         }
 
 
-        // Create an ArrayList of all exercises, loaded from exercises.json
-        ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
-
         // Create placeholder to potential exercise picks
         ArrayList<Exercise> potentialExercises = new ArrayList<>();
 
@@ -155,12 +156,14 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
 
 
         // Use our devised formula to calculate an 'ideal' number of exercises
-        int numberOfExercisesToGenerate = seekBarLength / 7;
-        Log.d("NUM", seekBarLength + " min workout requires " + numberOfExercisesToGenerate + " exercises");
+        // Important: If there are less exercises to choose from than 'ideal', return as many as we can
+        int numberOfExercisesToGenerate = Math.min( (seekBarLength / 7), potentialExercises.size());
+        Log.d("NUM", "Out of potential " + potentialExercises.size() + " picks, a " + seekBarLength +
+                " min workout requires " + numberOfExercisesToGenerate + " exercises");
 
         // Use Collections shuffle() to rearrange, then take first 'numberOfExercisesToGenerate' elements
         Collections.shuffle(potentialExercises, new Random(System.nanoTime()));
-        potentialExercises = new ArrayList<Exercise> (potentialExercises.subList(0, numberOfExercisesToGenerate));
+        potentialExercises = new ArrayList<> (potentialExercises.subList(0, numberOfExercisesToGenerate));
 
         // TODO: Account for workout type and difficulty preferences by using it to bias randomness
 
