@@ -1,12 +1,15 @@
 package com.joelrorseth.ironinspiredfitness;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -15,6 +18,8 @@ public class ExerciseAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mInflater;
     private ArrayList<Exercise> mDataSource;
+
+    Resources resources;
 
     // ==============================================
     // ==============================================
@@ -88,9 +93,14 @@ public class ExerciseAdapter extends BaseAdapter {
         subtitleTextView.setText(exercise.difficulty);
         detailTextView.setText(exercise.motion);
 
-        // TODO: Use Picasso open source lib to asynchronously load image
-        //Picasso.with(mContext).load(exercise.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView);
 
+        // Get resource path for current image
+        resources = mContext.getResources();
+        int id = resources.getIdentifier(exercise.imageUrl, "drawable", mContext.getPackageName());
+
+        // Asynchronously load thumbnails into ImageViews using image property of each Exercise
+        Picasso.with(mContext).load(id).into(thumbnailImageView);
+        
         return convertView;
     }
 
