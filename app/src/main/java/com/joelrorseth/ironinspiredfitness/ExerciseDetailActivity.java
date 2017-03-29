@@ -1,14 +1,19 @@
 package com.joelrorseth.ironinspiredfitness;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ExerciseDetailActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    Resources resources;
+
+    // ==============================================
+    // ==============================================
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_detail);
 
@@ -21,8 +26,8 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         // Extract exercises properties passed from ExercisesActivity
         String name = this.getIntent().getExtras().getString("name");
+        String image = this.getIntent().getExtras().getString("imageUrl");
         String description = this.getIntent().getExtras().getString("description");
-        String imageUrl = this.getIntent().getExtras().getString("imageUrl");
         String motion = "Motion: " + this.getIntent().getExtras().getString("motion");
         String difficulty = "Difficulty: " + this.getIntent().getExtras().getString("difficulty");
 
@@ -32,7 +37,9 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         exerciseDifficultyTextView.setText(difficulty);
         exerciseMotionTextView.setText(motion);
 
-        // TODO: Establish images so we know how to load into ImageView
-        // exerciseImageView.setImage     this.getIntent().getExtras().getString("difficulty");
+        // Use image property to build a resource path to the corresponding image asset
+        resources = getResources();
+        int id = resources.getIdentifier(image, "drawable", getApplicationContext().getPackageName());
+        exerciseImageView.setImageResource(id);
     }
 }
