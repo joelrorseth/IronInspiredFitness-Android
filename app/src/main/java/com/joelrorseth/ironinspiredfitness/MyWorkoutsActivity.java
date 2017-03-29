@@ -1,10 +1,14 @@
 package com.joelrorseth.ironinspiredfitness;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.google.gson.Gson;
@@ -28,6 +32,27 @@ public class MyWorkoutsActivity extends AppCompatActivity {
         // Our custom adapter only requires a list of Exercise objects
         WorkoutAdapter adapter = new WorkoutAdapter(this, workouts);
         workoutsListView.setAdapter(adapter);
+
+        final Context context = this;
+
+        // Setup an OnItemClickListener for the list view
+        workoutsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            // ==============================================
+            // ==============================================
+            @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                // Create Intent (transition)
+                Intent workoutIntent = new Intent(context, WorkoutDetailActivity.class);
+
+                // Important: Generate a workout, pass it to WorkoutDetailActivity
+                Workout workout = workouts.get(position);
+                workoutIntent.putExtra("workout", (Parcelable) workout);
+
+                // Transition to WorkoutDetailActivity, pop this activity off the activity stack
+                startActivity(workoutIntent);
+            }
+        });
     }
 
     // ==============================================
