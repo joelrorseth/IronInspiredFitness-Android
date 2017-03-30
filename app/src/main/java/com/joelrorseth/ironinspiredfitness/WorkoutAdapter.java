@@ -55,14 +55,13 @@ public class WorkoutAdapter extends BaseAdapter {
         if (convertView == null) {
 
             // Inflate custom row layout
-            convertView = mInflater.inflate(R.layout.list_item_exercise, parent, false);
+            convertView = mInflater.inflate(R.layout.list_item_workout, parent, false);
 
             // Create ViewHolder with references
             holder = new ViewHolder();
-            holder.thumbnailImageView = (ImageView) convertView.findViewById(R.id.exercise_list_icon);
-            holder.titleTextView = (TextView) convertView.findViewById(R.id.exercise_list_title);
-            holder.subtitleTextView = (TextView) convertView.findViewById(R.id.exercise_list_subtitle);
-            holder.detailTextView = (TextView) convertView.findViewById(R.id.exercise_list_detail);
+            holder.titleTextView = (TextView) convertView.findViewById(R.id.workout_list_title);
+            holder.subtitleTextView = (TextView) convertView.findViewById(R.id.workout_list_subtitle);
+            holder.detailTextView = (TextView) convertView.findViewById(R.id.workout_list_detail);
 
             // Hand onto this holder for future recycling!
             convertView.setTag(holder);
@@ -77,8 +76,6 @@ public class WorkoutAdapter extends BaseAdapter {
         TextView titleTextView = holder.titleTextView;
         TextView subtitleTextView = holder.subtitleTextView;
         TextView detailTextView = holder.detailTextView;
-        ImageView thumbnailImageView = holder.thumbnailImageView;
-
 
         // Get exercise object from data source for this row
         Workout workout = (Workout) getItem(position);
@@ -101,6 +98,5 @@ public class WorkoutAdapter extends BaseAdapter {
         public TextView titleTextView;
         public TextView subtitleTextView;
         public TextView detailTextView;
-        public ImageView thumbnailImageView;
     }
 }

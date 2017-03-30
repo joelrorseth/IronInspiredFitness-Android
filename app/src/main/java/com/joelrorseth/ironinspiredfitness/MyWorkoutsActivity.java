@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class MyWorkoutsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_workouts);
 
+        final Button clearWorkouts = (Button) findViewById(R.id.clear_all_workouts_button);
         ListView workoutsListView = (ListView) findViewById(R.id.workouts_list_view);
         loadWorkouts();
 
@@ -51,6 +53,15 @@ public class MyWorkoutsActivity extends AppCompatActivity {
 
                 // Transition to WorkoutDetailActivity, pop this activity off the activity stack
                 startActivity(workoutIntent);
+            }
+        });
+
+        clearWorkouts.setOnClickListener(new View.OnClickListener() {
+
+            @Override public void onClick(View v) {
+
+                clearAllWorkouts();
+                finish();
             }
         });
     }
@@ -79,5 +90,16 @@ public class MyWorkoutsActivity extends AppCompatActivity {
         }
 
         Log.d("LOAD", "Successfully loaded " + workouts.size() + " workouts from shared preferences");
+    }
+
+    // ==============================================
+    // ==============================================
+    public void clearAllWorkouts() {
+
+        // Remove all shared preferences stored under 'Workouts'
+        SharedPreferences preferences = getSharedPreferences("Workouts", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.apply();
     }
 }

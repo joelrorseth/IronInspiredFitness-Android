@@ -43,6 +43,15 @@ public class Workout implements Parcelable, Serializable {
         return exercises;
     }
 
+    // ==============================================
+    // ==============================================
+    @Override public String toString() {
+        String temp = "[";
+        for (Exercise exercise: exercises)
+            temp += exercise.toString() + ", ";
+
+        return temp + "]";
+    }
 
     // ==============================================
     // ==============================================

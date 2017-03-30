@@ -31,7 +31,6 @@ public class WorkoutDetailActivity extends AppCompatActivity {
         ListView mExercisesListView = (ListView) findViewById(R.id.workout_detail_list_view);
         Button saveWorkoutButton = (Button) findViewById(R.id.save_workout_button);
 
-
         // Employ custom adapter that specializes in displaying ArrayList<Exercise>
         ExerciseAdapter adapter = new ExerciseAdapter(this, workout.getExercises());
         mExercisesListView.setAdapter(adapter);
