@@ -17,22 +17,34 @@ public class ExercisesActivity extends AppCompatActivity {
 
     private ListView mExercisesListView;
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Log.d("******* DEBUG *********", "--> onResume called");
+    }
+
     // ==============================================
     // ==============================================
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercises);
 
+        Log.d("******* DEBUG *********", "--> onCreate called");
+
         mExercisesListView = (ListView) findViewById(R.id.exercises_list_view);
 
         // If adapter has already been set / used, avoid possibility of inserting duplicate data
         if (mExercisesListView.getAdapter() != null) {
-            Log.d("OPTIMIZE", "Exercise adapter has already been used for list view");
+            Log.d("***** OPTIMIZE ******", "Exercise adapter has already been used for list view");
             return;
         }
 
         // Store Exercise objects in ArrayList from file
-        final ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
+        Workout allExercisesWorkout = getIntent().getExtras().getParcelable("exerciseListWorkout");
+        final ArrayList<Exercise> exerciseList = allExercisesWorkout.getExercises();
+
+        Log.d("***** OPTIMIZE ******", "exerciselist has size " + exerciseList.size());
 
         // Sort ArrayList using custom Comparator
         Collections.sort(exerciseList, new Comparator<Exercise>() {
@@ -71,6 +83,15 @@ public class ExercisesActivity extends AppCompatActivity {
 
         // Our custom adapter only requires a list of Exercise objects
         ExerciseAdapter adapter = new ExerciseAdapter(this, exerciseList);
+        Log.d("******* DEBUG *********", "Just adapted exerciseList into ListView");
         mExercisesListView.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        mExercisesListView.setAdapter(null);
+        Log.d("******* DEBUG *********", "Set listview adapter to null and cleared exerciseList");
     }
 }

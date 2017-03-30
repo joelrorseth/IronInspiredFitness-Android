@@ -36,7 +36,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
     private SeekBar lengthSeekBar;
     private int seekBarLength = 60;
 
-    private static ArrayList<Exercise> exerciseList;
+    private ArrayList<Exercise> exerciseList;
     private static ArrayList<CheckBox> checkboxes;
 
     // ==============================================
@@ -45,8 +45,9 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_workout);
 
-        // Create an ArrayList of all exercises, loaded from exercises.json
-        exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
+        // Store Exercise objects in ArrayList from file
+        Workout allExercisesWorkout = getIntent().getExtras().getParcelable("exerciseListWorkout");
+        exerciseList = allExercisesWorkout.getExercises();
 
         // Link up Spinners
         workoutTypeSpinner = (Spinner) findViewById(R.id.workout_type_spinner);

@@ -1,11 +1,14 @@
 package com.joelrorseth.ironinspiredfitness;
 
 import android.content.Context;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
+
+import java.util.ArrayList;
 
 public class MainMenuActivity extends AppCompatActivity {
 
@@ -23,6 +26,12 @@ public class MainMenuActivity extends AppCompatActivity {
 
         final Context context = this;
 
+        // Loaded ArrayList<Exercise> holding all exercises parsed from exercises.json
+        ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
+
+        // Wrap exerciseList into Workout object to be able to pass as an Intent to other activities
+        final Workout exerciseListWorkout = new Workout("All exercises", exerciseList, Workout.Difficulty.Easy, Workout.Type.Any, 0.0);
+
         // Create listener for Generate Workout button
         generateWorkoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +39,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
                 // Create Intent (transition)
                 Intent detailIntent = new Intent(context, GenerateWorkoutActivity.class);
+                detailIntent.putExtra("exerciseListWorkout", (Parcelable) exerciseListWorkout);
                 startActivity(detailIntent);
             }
         });
@@ -52,6 +62,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
                 // Create Intent (transition)
                 Intent detailIntent = new Intent(context, ExercisesActivity.class);
+                detailIntent.putExtra("exerciseListWorkout", (Parcelable) exerciseListWorkout);
                 startActivity(detailIntent);
             }
         });

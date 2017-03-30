@@ -85,7 +85,6 @@ public class ExerciseAdapter extends BaseAdapter {
         TextView detailTextView = holder.detailTextView;
         ImageView thumbnailImageView = holder.thumbnailImageView;
 
-
         // Get exercise object from data source for this row
         Exercise exercise = (Exercise) getItem(position);
 
@@ -94,6 +93,8 @@ public class ExerciseAdapter extends BaseAdapter {
         subtitleTextView.setText(exercise.difficulty);
         detailTextView.setText(exercise.motion);
 
+
+        Log.d("******* DEBUG *********", "Loaded " + exercise.name + " into ListView");
 
         // Get resource path for current image
         resources = mContext.getResources();
