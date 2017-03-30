@@ -13,7 +13,7 @@
 		{
 			"name" : "Cable Seated Row",
 			"motion" : "Pull",
-			"image" : "seated_cable_row",
+			"image" : "cable_seated_row_normal",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Sit slightly forward on seat or bench in order to grasp cable attachment\n\n2) With a close grip, pull cable attachment to waist while straightening lower back\n\n3) Pull shoulders back and push chest forward while arching back\n\n4) Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward\n\n5) Repeat",
 			"difficulty" : "Moderate"
 		},

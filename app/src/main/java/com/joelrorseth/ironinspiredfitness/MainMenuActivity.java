@@ -27,7 +27,10 @@ public class MainMenuActivity extends AppCompatActivity {
         final Context context = this;
 
         // Loaded ArrayList<Exercise> holding all exercises parsed from exercises.json
-        ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
+        //ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
+
+        JSONLoader fileLoader = new JSONLoader();
+        ArrayList<Exercise> exerciseList = fileLoader.getExercisesFromFile("exercises.json", this);
 
         // Wrap exerciseList into Workout object to be able to pass as an Intent to other activities
         final Workout exerciseListWorkout = new Workout("All exercises", exerciseList, Workout.Difficulty.Easy, Workout.Type.Any, 0.0);
