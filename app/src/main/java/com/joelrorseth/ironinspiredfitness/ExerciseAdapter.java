@@ -98,7 +98,7 @@ public class ExerciseAdapter extends BaseAdapter {
         // Get resource path for current image
         resources = mContext.getResources();
         int id = resources.getIdentifier(exercise.imageUrl, "drawable", mContext.getPackageName());
-        Log.d("DEBUG", "For " + exercise.name + " with url " + exercise.imageUrl + ", resource id is " + id);
+
         // Asynchronously load thumbnails into ImageViews using image property of each Exercise
         Picasso.with(mContext).load(id).into(thumbnailImageView);
         

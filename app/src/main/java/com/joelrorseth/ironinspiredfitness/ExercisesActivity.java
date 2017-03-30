@@ -22,13 +22,15 @@ public class ExercisesActivity extends AppCompatActivity {
 
         mExercisesListView = (ListView) findViewById(R.id.exercises_list_view);
 
+        // If adapter has already been set / used, avoid possibility of inserting duplicate data
+        if (mExercisesListView.getAdapter() != null) {
+            Log.d("OPTIMIZE", "Exercise adapter has already been used for list view");
+            return;
+        }
+
         // Store Exercise objects in ArrayList from file
         final ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
         final Context context = this;
-
-        // Our custom adapter only requires a list of Exercise objects
-        ExerciseAdapter adapter = new ExerciseAdapter(this, exerciseList);
-        mExercisesListView.setAdapter(adapter);
 
         // Setup an OnItemClickListener for the list view
         mExercisesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -53,5 +55,9 @@ public class ExercisesActivity extends AppCompatActivity {
                 startActivity(detailIntent);
             }
         });
+
+        // Our custom adapter only requires a list of Exercise objects
+        ExerciseAdapter adapter = new ExerciseAdapter(this, exerciseList);
+        mExercisesListView.setAdapter(adapter);
     }
 }

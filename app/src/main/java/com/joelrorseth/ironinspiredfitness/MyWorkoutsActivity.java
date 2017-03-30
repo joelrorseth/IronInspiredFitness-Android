@@ -27,8 +27,16 @@ public class MyWorkoutsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_workouts);
 
+        // Link UI elements
         final Button clearWorkouts = (Button) findViewById(R.id.clear_all_workouts_button);
         ListView workoutsListView = (ListView) findViewById(R.id.workouts_list_view);
+
+        // If adapter has already been set / used, avoid possibility of inserting duplicate data
+        if (workoutsListView.getAdapter() != null) {
+            Log.d("OPTIMIZE", "Workout adapter has already been used for list view");
+            return;
+        }
+
         loadWorkouts();
 
         // Our custom adapter only requires a list of Exercise objects
@@ -64,6 +72,8 @@ public class MyWorkoutsActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
     }
 
     // ==============================================
