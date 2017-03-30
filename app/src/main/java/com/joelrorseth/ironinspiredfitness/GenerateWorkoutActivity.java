@@ -157,10 +157,12 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         ArrayList<Exercise> potentialExercises = new ArrayList<>();
 
 
-
-        // Check each exercise, and add to potentialExercises if it matches criteria
+        // Important: Check each exercise, and add to potentialExercises if it matches criteria
+        // This selection process accounts for type, difficulty, and target muscle groups
         for (Exercise exercise: exerciseList)
-            if (selectedMuscleGroups.contains(exercise.category))
+            if (    selectedMuscleGroups.contains(exercise.category) &&
+                    (difficulty.toString().equals(exercise.difficulty) || type.toString().equals(exercise.motion)) &&
+                    (!potentialExercises.contains(exercise)) )
                 potentialExercises.add(exercise);
 
 
@@ -174,8 +176,6 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         // Use Collections shuffle() to rearrange, then take first 'numberOfExercisesToGenerate' elements
         Collections.shuffle(potentialExercises, new Random(System.nanoTime()));
         potentialExercises = new ArrayList<> (potentialExercises.subList(0, numberOfExercisesToGenerate));
-
-        // TODO: Account for workout type and difficulty preferences by using it to bias randomness
 
 
         // TESTING: Print algorithm output
