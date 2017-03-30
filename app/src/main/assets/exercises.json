@@ -5,7 +5,7 @@
 		{
 			"name" : "Cable Seated Row (Underhand)",
 			"motion" : "Pull",
-			"image" : "cable_seated_row",
+			"image" : "seated_cable_row_underhand",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Sit slightly forward on seat or bench in order to grasp cable attachment\n\n2) With an underhand grip, pull cable attachment to waist while straightening lower back\n\n3) Pull shoulders back and push chest forward while arching back\n\n4) Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward\n\n5) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -13,7 +13,7 @@
 		{
 			"name" : "Cable Seated Row",
 			"motion" : "Pull",
-			"image" : "cable_seated_row",
+			"image" : "seated_cable_row",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Sit slightly forward on seat or bench in order to grasp cable attachment\n\n2) With a close grip, pull cable attachment to waist while straightening lower back\n\n3) Pull shoulders back and push chest forward while arching back\n\n4) Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward\n\n5) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -21,7 +21,7 @@
 		{
 			"name" : "Cable Seated Row (Wide)",
 			"motion" : "Pull",
-			"image" : "cable_seated_row",
+			"image" : "seated_cable_row",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Sit slightly forward on seat or bench in order to grasp cable attachment\n\n2) With a wide grip, pull cable attachment to waist while straightening lower back\n\n3) Pull shoulders back and push chest forward while arching back\n\n4) Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward\n\n5) Repeat",
 			"difficulty" : "Hard"
 		},
@@ -29,7 +29,7 @@
 		{
 			"name" : "Bent Over Row (Dumbbell)",
 			"motion" : "Pull",
-			"image" : "bent_over_row",
+			"image" : "bent_over_row_dumbbell",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1)Bend your knees slightly and bend over the dumbbells with your back straight\n\n2) Grasp each dumbbell with an overhand grip so they are horizontal and inline with your feet\n\n3) Pull the dumbbells to your upper waist while keeping the dumbbells close to your body\n\n4) In a controlled manner, return to the starting position where arms are extended and shoulders are stretched downward\n\n5) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -37,7 +37,7 @@
 		{
 			"name" : "Bent Over Row (Underhand)",
 			"motion" : "Pull",
-			"image" : "bent_over_row",
+			"image" : "bent_over_row_underhand_grip",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1)Bend your knees slightly and bend over the bar with your back straight\n\n2) Grasp the bar with an underhand grip\n\n3) Pull the bar to your upper waist while keeping the bar close to your body\n\n4) In a controlled manner, return to the starting position where arms are extended and shoulders are stretched downward\n\n5) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -51,9 +51,9 @@
 		},
 		
 		{
-			"name" : "Deadlift (dumbbell)",
+			"name" : "Deadlift (Dumbbell)",
 			"motion" : "Pull",
-			"image" : "deadlift",
+			"image" : "dumbbell_deadlift",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Grab a pair of dumbbells of an appropriate amount of weight and place them on the floor infront of you\n\n2) Stand shoulder width apart and bend the dumbbells, placing your hands on the bar with an overhand grip (dumbbells should be on their side)\n\n3) Make sure your back is straight and your chest is up\n\n4) Pull the weight up off the ground, thrusting forward at full extension\n\n5) Lower weight back down keeping the dumbbells as close to you as possible\n\n6) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -77,7 +77,7 @@
 		{
 			"name" : "Sumo Deadlift (Mixed)",
 			"motion" : "Pull",
-			"image" : "sumo_deadlift",
+			"image" : "sumo_deadlift_mixed_grip",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Load a barbell with an appropriate amount of weight and place it on the floor infront of you\n\n2) Stand with a wide stance (past shoulder length) and bend over and place your hands on the bar with a mixed grip\n\n3) Make sure your back is straight and your chest is up\n\n4) Pull the weight up off the ground, thrusting the bar once at full extension\n\n5) Lower weight back down keeping the bar as close to you as possible\n\n6) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -93,7 +93,7 @@
 		{
 			"name" : "Straight Leg Deadlift (Mixed)",
 			"motion" : "Pull",
-			"image" : "straight_leg_deadlift",
+			"image" : "straight_leg_deadlift_mixed",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Load a barbell with an appropriate amount of weight and place it on the floor infront of you\n\n2) Stand with a close stance (inside shoulder length) and bend over and place your hands on the bar with a mixed grip\n\n3) Make sure your back is straight and your chest is up\n\n4) Pull the weight up off the ground, thrusting the bar once at full extension\n\n5) Lower weight back down keeping the bar as close to you as possible\n\n6) Do this while keeping your legs as straight as possible\n\n7) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -101,7 +101,7 @@
 		{
 			"name" : "Straight Leg Deadlift",
 			"motion" : "Pull",
-			"image" : "straight_leg_deadlift",
+			"image" : "straight_leg_deadlift_",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Load a barbell with an appropriate amount of weight and place it on the floor infront of you\n\n2) Stand with a close stance (inside shoulder length) and bend over and place your hands on the bar with an overhand grip\n\n3) Make sure your back is straight and your chest is up\n\n4) Pull the weight up off the ground, thrusting the bar once at full extension\n\n5) Lower weight back down keeping the bar as close to you as possible\n\n6) Do this while keeping your legs as straight as possible\n\n7) Repeat",
 			"difficulty" : "Hard"
 		},
@@ -109,7 +109,7 @@
 		{
 			"name" : "One Arm Row (Underhand)",
 			"motion" : "Pull",
-			"image" : "one_arm_row",
+			"image" : "one_arm_row_underhand",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Grab a dumbbell and place it next to the side of a bench\n\n2) Place your left hand on the front of the bench and your left knee on the bench so that your back is straight\n\n3) Pick up the dumbbell with an underhand grip in your right hand and pull the bumbell up and towards your mid back (not chest) and lower it back down\n\n4) Do the opposite for the left side as well\n\n5) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -140,9 +140,9 @@
 		},
 		
 		{
-			"name" : "Preacher Curl",
+			"name" : "Preacher Curl (Dumbbell)",
 			"motion" : "Pull",
-			"image" : "preacher_curl",
+			"image" : "preacher_curl_dumbbell",
 			"desc" : "Hypertrophy: 3-4 Sets / 10-12 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Sit on preacher bench placing back of arms on pad\n\n2) Grasp the dumbbell vertically in your right hand\n\n3) Raise the dumbbell until forearm is vertical\n\n4) Lower dumbbell in a controlled manner until your arm is fully extended\n\n5) Repeat steps for your opposite arm",
 			"difficulty" : "Moderate"
 		},
@@ -166,7 +166,7 @@
 		{
 			"name" : "Hammer Curl",
 			"motion" : "Pull",
-			"image" : "dumbbell_curl",
+			"image" : "hammer_curl",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) With an appropriate weight, grab the dumbbells with a vertical grip\n\n2) Lift the dumbbells up to just under your shoulders while crossing the dumbbell infront of your chest\n\n3) Lower the weight in a slow and controlled manner\n\n4) Repeat\n\nNote:Can do doth arms at the same time or alternate arms",
 			"difficulty" : "Moderate"
 		},
@@ -174,7 +174,7 @@
 		{
 			"name" : "Run the Rack",
 			"motion" : "Pull",
-			"image" : "dumbbell_curl",
+			"image" : "run_the_rack",
 			"desc" : "1 Set / Reps (to failure)\n\n1) Start at a heavier weighted dumbbell set (can perform only 8-10 reps)\n\n2) Grab the dumbbells with an underhand grip\n\n3) Lift the dumbbells up to just under your shoulders\n\n3) Lower the weight in a slow and controlled manner\n\n4) Once failure is reached, drop down to the next lightest dumbbell set available (drop by 10lbs if you started at 50lbs or higher)\n\n5) Repeat until you reach 5lbs and stop\n\nNote: Can do doth arms at the same time or alternate arms",
 			"difficulty" : "Hard"
 		},
@@ -182,7 +182,7 @@
 		{
 			"name" : "Barbell Curl",
 			"motion" : "Pull",
-			"image" : "overhand_curl",
+			"image" : "barbell_curl",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Grab a barbell of an appropriate weight with an underhand grip\n\n2) Lift the barbell up to just under your shoulders\n\n3) Lower the weight in a slow controlled manner\n\n4) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -198,7 +198,7 @@
 		{
 			"name" : "Twenty-Ones",
 			"motion" : "Pull",
-			"image" : "overhand_curl",
+			"image" : "twenty_ones",
 			"desc" : "Hypertrophy: 3 Sets / 21 Reps\n\n1) Grab a barbell of an appropriate weight with an underhand grip\n\n2) For the first 7 reps (0-7), lift the barbell up so that your forearms are parallel to the floor\n\n3) Lower the weight in a slow controlled manner\n\n4) For the next 7 reps (8-14), starting with your forearms parallel to the ground, lift the barbell up to just under your shoulders\n\n5) Lower the weight in a slow controlled manner\n\n6) For the last 7 reps (15-21), starting with your arms extended down, lift the barbell up to just under your shoulders for a full range of motion\n\n7) Lower the weight in a slow controlled manner\n\n8) Repeat",
 			"difficulty" : "Hard"
 		}
@@ -255,7 +255,7 @@
 		{
 			"name" : "Bench Press (Dumbbell)",
 			"motion" : "Push",
-			"image" : "bench_press",
+			"image" : "dumbbell_bench_press",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Sit on the edge of the bench with a set of dumbbells on your knees\n\n2) With the help of your knees throw the weight up while you lay back on the bench\n\n3) With your shoulders dug into the bench, arch your back and squeeze your glutes for maximum balance\n\n4) Move your feet back so that your heels barely lift of the ground\n\n5) Lower the weight so that you touch your chest before exploding the weight back to the top\n\n6) Repeat",
 			"difficulty" : "Easy"
 		},	
@@ -271,7 +271,7 @@
 		{
 			"name" : "Bench Press (Wide)",
 			"motion" : "Push",
-			"image" : "bench_press",
+			"image" : "bench_press_wide_grip",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Lay down on a bench with a barbell above you\n\n2) Position your body so the barbell rests between your eyes and your nose\n\n3) With your shoulders dug into the bench, arch your back and squeeze your glutes for maximum balance\n\n4) Move your feet back so that your heels barely lift of the ground\n\n5) Grab the bar with a wide (past shoulder width apart) overhand grip, lift of the rack and in a controlled manner, lower the weight so that you touch your chest before exploding the weight back to the top\n\n6) Repeat",
 			"difficulty" : "Hard"
 		},	
@@ -283,7 +283,7 @@
 		{
 			"name" : "Chest Flys (Dumbbell)",
 			"motion" : "Push",
-			"image" : "chest_flys",
+			"image" : "dumbbell_chest_flys",
 			"desc" : "Hypertrophy: 3-4 Sets / 10-12 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Position the bench at about a 45 degree angle\n\n2) Grab a set of lighter dumbbells and sit down on the bench with the dumbbells resting on your knees\n\n3) Throw the weights up and lay back on the bench with the weight straight up infront of you\n\n4) Push the handles back out infront of you to complete the rep\n\n5) Repeat",
 			"difficulty" : "Easy"
 		},	
@@ -299,7 +299,7 @@
 		{
 			"name" : "Cable Flys",
 			"motion" : "Push",
-			"image" : "chest_flys",
+			"image" : "cable_flys",
 			"desc" : "Hypertrophy: 3-4 Sets / 10-12 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Position the cables at a height so that the handles are above your shoulders\n\n2) Grab onto the handles one at a time and step forward while pulling on the cables to position them infront of you\n\n3) In a controlled manner allow the weight to fall back into its starting position to create a stretch in the muscle\n\n4) Push the handles back out infront of you to complete the rep\n\n5) Repeat",
 			"difficulty" : "Hard"
 		},	
@@ -315,7 +315,7 @@
 		{
 			"name" : "Incline Bench Press",
 			"motion" : "Push",
-			"image" : "incline_dumbbell_press",
+			"image" : "incline_bench",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Lay down on the bench\n\n2) With your shoulders dug into the bench, arch your back and squeeze your glutes for maximum balance\n\n3) In a controlled manner lower the barbell down to your upper chest and then explode the weight back up4) Repeat",
 			"difficulty" : "Hard"
 		},
@@ -323,7 +323,7 @@
 		{
 			"name" : "Push-ups (Knees)",
 			"motion" : "Push",
-			"image" : "pushups",
+			"image" : "pushups_knees",
 			"desc" : "4-5 Sets / 10-15 Reps\n\n1) Position yourself on the floor with your knees together on the ground and your hands at your chest but shoulder width apart\n\n2) While keeping your back straight, push yourself off the ground with your knees on the ground and palms of your hands\n\n3) Lower yourself so that your nose almost touches the ground\n\n4) Do not allow yourself to fall to the ground\n\n5) Repeat",
 			"difficulty" : "Easy"
 		},	
@@ -339,7 +339,7 @@
 		{
 			"name" : "Push-ups (Diamond)",
 			"motion" : "Push",
-			"image" : "pushups",
+			"image" : "pushups_diamond",
 			"desc" : "4-5 Sets / 10-15 Reps\n\n1) Position yourself on the floor with your legs straight back and your hands at chest level in a diamond formation\n\n2) While keeping your back straight, push yourself off the ground with your tippy toes and palms of your hands on the ground still\n\n3) Lower yourself so that your nose almost touches the ground\n\n4) Do not allow yourself to fall to the ground\n\n5) Repeat",
 			"difficulty" : "Moderate"
 		},	
@@ -360,7 +360,7 @@
 		{
 			"name" : "Leg Raises",
 			"motion" : "Abs",
-			"image" : "hanging_leg_raises",
+			"image" : "leg_raise",
 			"desc" : "4-5 Sets / 10-12 Reps\n\n1) Lay down on the floor with your legs flat out infront of you\n\n2) Lift your legs slightly off the ground so that your core is engaged\n\n3) Lift your legs up as close to 90 degrees as you can while trying to keep you legs as straight as possible\n\n4) Lower your legs down slowly to your starting position\n\n5) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -368,7 +368,7 @@
 		{
 			"name" : "V-Ups",
 			"motion" : "Abs",
-			"image" : "hanging_leg_raises",
+			"image" : "v_up",
 			"desc" : "4-5 Sets / 10-12 Reps\n\n1) Lay down on the floor with your legs flat out infront of you\n\n2) Lift your legs off the ground at about a 45-60 degree angle\n\n3) Lift yourself up off the ground and try to touch your toes\n\n4) Keep your legs as straight as possible\n\n4) Lower your torso down slowly to your starting position\n\n5) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -384,7 +384,7 @@
 		{	
 			"name" : "Exercise Ball Crunches",
 			"motion" : "Abs",
-			"image" : "crunches",
+			"image" : "exercise_ball_crunch",
 			"desc" : "4-5 Sets / 10-15 Reps\n\n1) Grab an exercise ball of an appropriate height so that your knees bend at a 90 degree angle when sitting on it\n\n2) Cross your arms in front of you or hold your hands at the side of your head\n\n3) Using your core, lift your torso up off the ball so you are almost sitting up on the ball\n\n4) Lower yourself back onto the ball slowly\n\n5) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -400,7 +400,7 @@
 		{	
 			"name" : "Sit-Ups",
 			"motion" : "Abs",
-			"image" : "crunches",
+			"image" : "situps",
 			"desc" : "4-5 Sets / 10-15 Reps\n\n1) Lay down on the floor with your legs bent at a 90 degree angle\n\n2) Either cross your arms in front of you or hold your hands at the side of your head\n\n3) Using your core, lift your body up off the ground so you are sitting up\n\n4) Lower yourself back onto the ground slowly\n\n5) Repeat",
 			"difficulty" : "Hard"
 		},
@@ -416,7 +416,7 @@
 		{
 			"name" : "Bicycle Kicks",
 			"motion" : "Abs",
-			"image" : "russian_twist",
+			"image" : "bicycle_kicks",
 			"desc" : "4-5 Sets / 10-15 Reps\n\n1) Sit down on the ground so that you are balancing on just your butt\n\n2) Place your hands on the side of your head\n\n3) Tuck your left knee in and touch it with your right elbow to cause a twisting motion\n\n4) Your right leg should still be straight out infront of you\n\n5) Alternate to the opposite elbow and knee to complete one rep\n\n6) Remain balanced on your butt the entire movement\n\n7) Repeat",
 			"difficulty" : "Moderate"
 		}
@@ -433,9 +433,9 @@
 	"Forearms": [
 	
 		{
-			"name" : "Forearm Curl (dumbbell)",
+			"name" : "Forearm Curl (Dumbbell)",
 			"motion" : "Pull",
-			"image" : "forearm_curl",
+			"image" : "dumbbell_forearm_curl",
 			"desc" : "3-4 Sets / 10-12 Reps\n\n1) Grab a dumbbell and sit on the end of a bench\n\n2) Lean over and rest your arm on your leg so that your hand is hanging just over your knee\n\n3) Use your wrist to curl the weight up and back down in a controlled manner\n\n4) Repeat movement for opposite arm",
 			"difficulty" : "Easy"
 		},
@@ -451,7 +451,7 @@
 		{
 			"name" : "Dumbbell Hold",
 			"motion" : "Pull",
-			"image" : "forearm_curl",
+			"image" : "dumbbell_hold",
 			"desc" : "3-4 Sets / 45 seconds - 1 minute\n\n1) Grab a set of heavier dumbbells and hold them in your hands\n\n2) While squeezing the grips as hard as you can, hold the dumbbells at your sides\n\n3) Do not let the weight rest against your body\n\n4) Hold the weight for the recommended time\n\n5) Repeat",
 			"difficulty" : "Hard"
 		}
@@ -468,7 +468,7 @@
 		{
 			"name" : "Romanian Deadlift (Dumbbell)",
 			"motion" : "Legs",
-			"image" : "romanian_deadlift",
+			"image" : "romanian_deadlift_dumbbell",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Grab a set of dumbbells and set them in front of you on their sides\n\n2) With your feet together, pick up the weight and stand up straight to start the motion\n\n3) While hinging back at your hips, lower the weight to just past your knees while keeping the weight as close to your body as possible\n\n4) Keep your back and legs straight throught the movement\n\n5) Pull the weight back up\n\n6) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -500,7 +500,7 @@
 		{
 			"name" : "Lunges",
 			"motion" : "Legs",
-			"image" : "lunge_pass_through",
+			"image" : "lunges",
 			"desc" : "3-4 Sets / 8-10 Reps\n\n1) Lunge forward with your right foot so that your left knee is barely off the ground\n\n2) Push back up into your starting position\n\n3) Do the same for the left leg to complete one rep\n\n4) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -523,7 +523,7 @@
 		{
 			"name" : "Seated Overhead Press",
 			"motion" : "Push",
-			"image" : "overhead_press",
+			"image" : "seated_overhead_press",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) At an upright bench with a barbell holder over it, position the barbell so that its at a comfortable height above your shoulders\n\n2) Grab the barbell with an overhand grip about shoulder length apart\n\n3) Lower the bar so that it rests just above your neck\n\n4) Raise the bar back in to its starting point\n\n5) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -539,7 +539,7 @@
 		{
 			"name" : "One Arm Dumbbell Shoulder Press",
 			"motion" : "Push",
-			"image" : "dumbbell_shoulder_press",
+			"image" : "one_arm_dumbbell_press",
 			"desc" : "3-4 Sets / 8-10 Reps\n\n1) Grab a dumbbell of an appropriate weight\n\n2) Sit on an upright bench and hold the dumbbell on your knee\n\n3) Using your knee and other hand, lift the weight up abvoe your head\n\n4) Lower the weight back down to shoulder level in a controlled manner while keeping your arms at avbout a 45 degree angle from your body\n\n5) Do not arch your back during this motion\n\n6) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -561,10 +561,10 @@
 		},
 		
 		{
-			"name" : "Front Dealt Raise",
+			"name" : "Front Delt Raise",
 			"motion" : "Pull",
-			"image" : "lateral_raise",
-			"desc" : "3-4 Sets / 10-12 Reps\n\n1) Grab a set of dumbbells of a lighter weight\n\n2) Stand up straight with the dumbbells infront of you\n\n3) While keeping your arms as straight as possible, raise the dumbbells up to shoulder height infront of you\n\n4) Do not allow the weight to go higher than your shoulders\n\n5) Lower the weight back down slowly to complete the motion\n\n6) Repeat.",
+			"image" : "front_delt_raise",
+			"desc" : "3-4 Sets / 10-12 Reps\n\n1) Grab a set of dumbbells of a lighter weight\n\n2) Stand up straight with the dumbbells in front of you\n\n3) While keeping your arms as straight as possible, raise the dumbbells up to shoulder height infront of you\n\n4) Do not allow the weight to go higher than your shoulders\n\n5) Lower the weight back down slowly to complete the motion\n\n6) Repeat.",
 			"difficulty" : "Easy"
 		}
 	],
@@ -587,7 +587,7 @@
 		{
 			"name" : "Shoulder Shrugs (Barbell)",
 			"motion" : "Pull",
-			"image" : "shoulder_shrugs",
+			"image" : "shoulder_shrugs_barbell",
 			"desc" : "3-4 Sets / 10-12 Reps\n\n1) Grab a barbell of an appropriate weight\n\n2) While keeping your head straight and your shoulders back, Shrug your shoulders to pull the weight up\n\n3) Hold for a couple seconds then slowly lower the weight back down\n\n4) Repeat",
 			"difficulty" : "Moderate"
 		},
@@ -620,7 +620,7 @@
 		{
 			"name" : "Tricep Pushdowns",
 			"motion" : "Push",
-			"image" : "tricep_kickback",
+			"image" : "tricep_pushdown",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Grab the rope attachment and hook it up to the cable machine so that it is positioned higher than your shoulders\n\n2) Grab each end of the rope one in each hand\n\n3) Position yourself so your butt is out and your chest is up\n\n4) While keeping your elbows tucked in to your sides, pull the rope down into a full extension\n\n5) Slowly return the attachment to it's starting position\n\n6) Repeat\n\nNote: Can be done with a bar attachment as well",
 			"difficulty" : "Moderate"
 		},
@@ -628,7 +628,7 @@
 		{
 			"name" : "Skull Crushers (Dumbbells)",
 			"motion" : "Push",
-			"image" : "skull_crushers",
+			"image" : "dumbbell_skull_crushers",
 			"desc" : "Grab a set of dumbbells and sit on the edge of a bench\n\n2) Lay down so that your shouler blades are tucked into the bench\n\n3) With the dumbbells straight up above you lower your arms back so the weight is not directly above you\n\n4) Hinging at the elbows, lower the weight towards your face without hitting it\n\n5) Raise the weight back up to its starting position\n\n6) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -644,7 +644,7 @@
 		{
 			"name" : "Guillotine",
 			"motion" : "Push",
-			"image" : "skull_crushers",
+			"image" : "guillotine",
 			"desc" : "3-4 Sets / 8-10 Reps\n\n1) Lay down on a bench with a barbell above you\n\n2) Position your body so the barbell rests between your eyes and your nose\n\n3) With your shoulders dug into the bench, arch your back and squeeze your glutes for maximum balance\n\n4) Move your feet back so that your heels barely lift of the ground\n\n5) Grab the bar with an overhand grip, lift of the rack and in a controlled manner, lower the weight towards the bottom of your chest without touching it\n\n6) Hinge at your elbows to lower the bar towards your neck\n\n7) Raise the bar back in to it's starting position to complete the movement\n\n8) Repeat",
 			"difficulty" : "Hard"
 		},
@@ -669,7 +669,7 @@
 		{
 			"name" : "Goblet Squats",
 			"motion" : "Legs",
-			"image" : "squats",
+			"image" : "goblet_squat",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Grab a dumbbell of an appropriate weight\n\n2) Hold the flat part of the dumbbell with the palms of both of your hands\n\n3) With the weight positioned infront of you, squat down so your butt goes below your knees\n\n4) Keeping the pressure on your heels, explode back up into a full extension\n\n5) Repeat",
 			"difficulty" : "Easy"
 		},
@@ -685,7 +685,7 @@
 		{
 			"name" : "Front Squats",
 			"motion" : "Legs",
-			"image" : "squats",
+			"image" : "front_squat",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Stand in front of the squat rack with the barbell positioned at your shoulder height\n\n2) Rest the barbell on your collar bone with either your arms crossed or an underhand grip\n\n3) Move underneath the barbell so that it rests on your traps comfortably\n\n4) Lift the weight off the rack and take a step back\n\n5) Standing with your feet about shoulder width apart, Begin decsending by hinging back at your hips and dropping your butt so that you go past having your quads parallel to the floor\n\n6) Explode back up to the top of the motion\n\n7) Repeat",
 			"difficulty" : "Hard"
 		},
@@ -693,7 +693,7 @@
 		{
 			"name" : "Single Leg Press",
 			"motion" : "Legs",
-			"image" : "leg_press",
+			"image" : "one_leg_press",
 			"desc" : "Hypertrophy: 3-4 Sets / 8-10 Reps\nStrength: 3-4 Sets / 4-6 Reps (Heavy)\n\n1) Sit down on the seat and place one foot up on the platform so it is inline with your shoulder\n\n2) Push the weight up off the rack and remove the safety bars\n\n3) Lower the weight down so your knee almost touch your chest\n\n4) Push the weight back up but do not lock out at your knee\n\n5) Repeat this movement in a smooth continuous motion for maximum engagement",
 			"difficulty" : "Easy"
 		},
