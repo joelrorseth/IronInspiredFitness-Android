@@ -119,6 +119,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
                 // Important: Generate a workout, pass it to WorkoutDetailActivity
                 Workout workout = generateWorkout();
                 workoutIntent.putExtra("workout", (Parcelable) workout);
+                workoutIntent.putExtra("showSaveButton", true);
 
                 // Transition to WorkoutDetailActivity, pop this activity off the activity stack
                 startActivity(workoutIntent);

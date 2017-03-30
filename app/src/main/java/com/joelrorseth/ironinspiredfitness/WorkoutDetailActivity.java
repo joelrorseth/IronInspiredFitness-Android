@@ -3,6 +3,7 @@ package com.joelrorseth.ironinspiredfitness;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,10 +27,17 @@ public class WorkoutDetailActivity extends AppCompatActivity {
 
         // Extract Workout object passed from GenerateWorkoutActivity
         workout = getIntent().getExtras().getParcelable("workout");
+        Boolean showSaveButton = this.getIntent().getExtras().getBoolean("showSaveButton");
 
         // Link up the ListView and Save Workout Button
         ListView mExercisesListView = (ListView) findViewById(R.id.workout_detail_list_view);
         Button saveWorkoutButton = (Button) findViewById(R.id.save_workout_button);
+
+        if (showSaveButton.equals(false)) {
+            saveWorkoutButton.setEnabled(false);
+            saveWorkoutButton.setBackgroundColor(Color.GRAY);
+            saveWorkoutButton.setText(workout.getName());
+        }
 
         // Employ custom adapter that specializes in displaying ArrayList<Exercise>
         ExerciseAdapter adapter = new ExerciseAdapter(this, workout.getExercises());
