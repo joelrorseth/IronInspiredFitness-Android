@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 import android.widget.*;
 
 public class ExercisesActivity extends AppCompatActivity {
@@ -30,6 +33,16 @@ public class ExercisesActivity extends AppCompatActivity {
 
         // Store Exercise objects in ArrayList from file
         final ArrayList<Exercise> exerciseList = Exercise.getExercisesFromFile("exercises.json", this);
+
+        // Sort ArrayList using custom Comparator
+        Collections.sort(exerciseList, new Comparator<Exercise>() {
+            @Override public int compare(Exercise e1, Exercise e2) {
+                return e1.name.compareTo(e2.name);
+            }
+
+        });
+
+
         final Context context = this;
 
         // Setup an OnItemClickListener for the list view
