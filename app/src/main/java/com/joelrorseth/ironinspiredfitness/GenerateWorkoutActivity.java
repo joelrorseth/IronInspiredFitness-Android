@@ -11,12 +11,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -28,13 +30,16 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+import static com.joelrorseth.ironinspiredfitness.R.id.cbCalves;
+import static com.joelrorseth.ironinspiredfitness.R.id.linear_layout_1;
+
 public class GenerateWorkoutActivity extends AppCompatActivity {
 
     private Spinner workoutTypeSpinner;
     private Spinner workoutDifficultySpinner;
 
     private SeekBar lengthSeekBar;
-    private int seekBarLength = 60;
+    private int seekBarLength = 11;
 
     private ArrayList<Exercise> exerciseList;
     private static ArrayList<CheckBox> checkboxes;
@@ -72,7 +77,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
 
         // Link up TextView displaying the prompt for (and currently selected) workout length
         final TextView workoutLengthTextView = (TextView) findViewById(R.id.workout_length_prompt_textview);
-
+        workoutLengthTextView.setText("I want to exercise for 1h");
 
         // Create basic adapters for string-arrays defined in strings.xml
         ArrayAdapter<CharSequence> typeAdapter =
@@ -89,9 +94,12 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
         workoutTypeSpinner.setAdapter(typeAdapter);
         workoutDifficultySpinner.setAdapter(difficultyAdapter);
 
+        lengthSeekBar.setProgress(10);
 
         // Establish a listener for the workout length SeekBar
         lengthSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -99,7 +107,19 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
                 seekBarLength = progress;
 
                 // TODO: Show text indicating current value
-                workoutLengthTextView.setText("I want to exercise for " + String.valueOf(progress) + " minutes");
+
+                if(((progress*5)+10) < 60) {
+                    workoutLengthTextView.setText("I want to exercise for " + String.valueOf((progress * 5) + 10) + " minutes");
+                }
+                else if(((progress*5)+10) == 60 ){
+                    workoutLengthTextView.setText("I want to exercise for 1h");
+                }
+                else if(((progress*5)+10) > 60 && ((progress*5)+10) < 120){
+                    workoutLengthTextView.setText("I want to exercise for 1h and " + String.valueOf(((progress * 5) + 10)-60) + " minutes");
+                }
+                else{
+                    workoutLengthTextView.setText("I want to exercise for 2h");
+                }
             }
 
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -170,7 +190,7 @@ public class GenerateWorkoutActivity extends AppCompatActivity {
 
         // Use our devised formula to calculate an 'ideal' number of exercises
         // Important: If there are less exercises to choose from than 'ideal', return as many as we can
-        int numberOfExercisesToGenerate = Math.min( (seekBarLength / 7), potentialExercises.size());
+        int numberOfExercisesToGenerate = Math.min( ((seekBarLength*5) / 7), potentialExercises.size());
         Log.d("NUM", "Out of potential " + potentialExercises.size() + " picks, a " + seekBarLength +
                 " min workout requires " + numberOfExercisesToGenerate + " exercises");
 
